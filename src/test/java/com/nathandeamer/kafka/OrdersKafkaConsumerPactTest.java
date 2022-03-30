@@ -37,7 +37,7 @@ public class OrdersKafkaConsumerPactTest {
   @Autowired
   private ObjectMapper objectMapper;
 
-  @Pact(consumer = "pactflow-example-consumer-java-kafka")
+  @Pact(consumer = "pact-order-kafka-consumer")
   MessagePact orderMessage(MessagePactBuilder builder) {
     PactDslJsonBody body = new PactDslJsonBody();
     body.integerType("id", 1234);
