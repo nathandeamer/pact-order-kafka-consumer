@@ -26,7 +26,7 @@ import static org.mockito.Mockito.verify;
 @ExtendWith(PactConsumerTestExt.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @PactTestFor(providerName = "pact-order-kafka-provider", providerType = ProviderType.ASYNCH, pactVersion = PactSpecVersion.V3)
-public class OrdersPactTest {
+public class OrdersKafkaConsumerPactTest {
 
   @Autowired
   private OrderEventListener listener;
@@ -57,7 +57,7 @@ public class OrdersPactTest {
 
   @Test
   @PactTestFor(pactMethod = "orderMessage")
-  void shouldOrderMessage(List<Message> messages) throws Exception {
+  void shouldConsumerOrderMessage(List<Message> messages) throws Exception {
     Order order = objectMapper.readValue(messages.get(0).contentsAsString(), Order.class);
 
     assertDoesNotThrow(() -> {
