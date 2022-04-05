@@ -1,4 +1,4 @@
-package com.nathandeamer.kafka;
+package com.nathandeamer.kafka.consumer;
 
 import au.com.dius.pact.consumer.MessagePactBuilder;
 import au.com.dius.pact.consumer.dsl.PactDslJsonBody;

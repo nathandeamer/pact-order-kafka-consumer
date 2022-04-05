@@ -1,4 +1,4 @@
-package com.nathandeamer.kafka;
+package com.nathandeamer.kafka.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

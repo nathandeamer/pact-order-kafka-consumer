@@ -1,4 +1,4 @@
-package com.nathandeamer.kafka;
+package com.nathandeamer.kafka.consumer;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
