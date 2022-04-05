@@ -52,7 +52,7 @@ public class OrdersKafkaConsumerPactTest {
     metadata.put("Content-Type", "application/json");
     metadata.put("kafka_topic", "orders");
 
-    return builder.expectsToReceive("a order message").withMetadata(metadata).withContent(body).toPact();
+    return builder.expectsToReceive("a order created event").withMetadata(metadata).withContent(body).toPact();
   }
 
   @Test
